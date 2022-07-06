@@ -23,12 +23,12 @@
 
         <ul>
             <li v-for="(element, i) in todos">
-                <span :class="{done: element.done === true}">{{ element.text }}</span>
+                <span :class="{done: element.done === true}" @click="toggleDoneUndone(element)">{{ element.text }}</span>
                 <i class="fa-solid fa-xmark" @click="removeFromList(todos, i)"></i>
             </li>
         </ul>
         <div id="input-field">
-            <input type="text" :placeholder="placeholder" v-model.trim="newTask">
+            <input type="text" :placeholder="placeholder" v-model.trim="newTask" @keyUp.enter="addToList(todos, newTask)">
             <button @click="addToList(todos, newTask)">Add to list!</button>
         </div>
     </div>

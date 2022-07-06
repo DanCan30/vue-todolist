@@ -28,7 +28,9 @@ const app = new Vue (
     methods: {
         
         removeFromList: function(list, index) {
+
             list.splice(index, 1);
+
         },
 
         addToList: function(list, itemToAdd) {
@@ -44,9 +46,12 @@ const app = new Vue (
                 this.placeholder = "Type a task...";
             } else {
                 this.placeholder = "Not valid!";
-            }
+            };
             
+        },
 
+        toggleDoneUndone: function(element) {
+            element.done = !element.done;
         }
 
     }
