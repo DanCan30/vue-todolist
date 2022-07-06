@@ -20,9 +20,7 @@ ul {
     text-align: center;
 }
 
-ul li {
-    margin: 5px auto;
-    padding: .5rem 0;
+ul li span {
     width: 25rem;
     background-color: white;
     border-bottom: 2px solid lightgrey;
@@ -31,15 +29,26 @@ ul li {
     border-right: none;
     font-weight: bolder;
     cursor: pointer;
+    margin: 5px auto;
+    padding: .5rem 0;
+    height: 2.5rem;
+    display: inline-block;
     font-size: 1.3rem;
 }
 
-li.done {
+.done {
     background-color: lightgreen;
     border-top: 2px solid lightgrey;
     border-right: 2px solid lightgrey;
     border-bottom: none;
     border-left: none;
-    text-decoration: line-through;
+}
 
+
+li > i {
+    margin-left: 10px;
+    padding: .5rem .7rem;
+    background-color: lightcoral;
+    font-size: 1.3rem;
+    cursor: pointer;
 }

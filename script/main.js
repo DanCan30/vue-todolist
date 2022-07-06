@@ -19,6 +19,14 @@ const app = new Vue (
         }
     ]
 
+    },
+
+    methods: {
+        
+        removeFromList: function(list, index) {
+            list.splice(index, 1);
+        }
+
     }
 }
     
