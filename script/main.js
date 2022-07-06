@@ -20,17 +20,12 @@ const app = new Vue (
 
         },
 
-        addToList: function(list, itemToAdd) {
-
-            itemToAdd = {
-                text: this.newTask,
-                done: false,
-            }
+        addToList: function(list) {
 
             if(this.newTask != "") {
-                list.push(itemToAdd);
+                list.push({text: this.newTask, done: false});
                 this.newTask = "";
-                this.placeholder = "Type a task...";
+                this.placeholder = "Write a task...";
             } else {
                 this.placeholder = "Task not valid";
             };
@@ -42,6 +37,6 @@ const app = new Vue (
         },
 
     },
-}
+},
     
-)
+);
