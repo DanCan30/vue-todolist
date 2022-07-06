@@ -16,7 +16,7 @@ const app = new Vue (
             {
                 text: 'Fare il bucato',
                 done: false
-            }
+            },
         ],
 
         newTask: "",
@@ -45,16 +45,16 @@ const app = new Vue (
                 this.newTask = "";
                 this.placeholder = "Type a task...";
             } else {
-                this.placeholder = "Not valid!";
+                this.placeholder = "Task not valid";
             };
             
         },
 
         toggleDoneUndone: function(element) {
             element.done = !element.done;
-        }
+        },
 
-    }
+    },
 }
     
 )

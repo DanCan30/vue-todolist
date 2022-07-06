@@ -23,8 +23,8 @@
 
         <ul>
             <li v-for="(element, i) in todos">
-                <span :class="{done: element.done === true}" @click="toggleDoneUndone(element)">{{ element.text }}</span>
-                <i class="fa-solid fa-xmark" @click="removeFromList(todos, i)"></i>
+                <div class="task" :class="{done: element.done === true}" @click="toggleDoneUndone(element)">{{ element.text }}</div>
+                <div class="remove-task" @click="removeFromList(todos, i)"><i class="fa-solid fa-xmark" ></i></div>
             </li>
         </ul>
         <div id="input-field">
