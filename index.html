@@ -28,7 +28,7 @@
             </li>
         </ul>
         <div id="input-field">
-            <input type="text" :placeholder="placeholder" v-model.trim="newTask" @keyUp.enter="addToList(todos)">
+            <input type="text" :placeholder="placeholder" v-model="newTask" @keyUp.enter="addToList(todos)">
             <button @click="addToList(todos)">Add to list!</button>
         </div>
     </div>

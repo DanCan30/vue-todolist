@@ -22,11 +22,14 @@ const app = new Vue (
 
         addToList: function(list) {
 
-            if(this.newTask != "") {
+            const trimmedInput = this.newTask.trim();
+
+            if(trimmedInput != "") {
                 list.push({text: this.newTask, done: false});
                 this.newTask = "";
                 this.placeholder = "Write a task...";
             } else {
+                this.newTask = "";
                 this.placeholder = "Task not valid";
             };
             
